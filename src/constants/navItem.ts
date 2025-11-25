@@ -1,9 +1,7 @@
 const navItems = [
-  { labelKey: "home", href: "/" },
-  { labelKey: "about", href: "/about" },
-  { labelKey: "contactUs", href: "/contact-us" },
-  { labelKey: "terms", href: "/terms-condition" },
-  { labelKey: "privacy", href: "/privacy-policy" },
+  { labelKey: "Features", href: "#features" },
+  { labelKey: "How It Works", href: "#how-it-works" },
+  { labelKey: "Pricing", href: "#pricing" },
 ];
 
 export default navItems;
