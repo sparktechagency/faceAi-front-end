@@ -68,7 +68,7 @@ const pricingPlans: PricingPlan[] = [
 
 export default function Pricing() {
   return (
-    <section className="py-10 lg:py-20 container">
+    <section id="pricing" className="py-10 lg:py-20 container">
       {/* Header */}
       <div className="text-center mb-12">
         <h2 className="section-title">Choose Your Plan</h2>
