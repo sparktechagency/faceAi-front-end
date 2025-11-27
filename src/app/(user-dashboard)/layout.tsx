@@ -33,17 +33,16 @@ const layout = ({ children }: { children: React.ReactNode }) => {
                                 components: {
                                     Select: {
                                         clearBg: "transparent",
-                                        selectorBg: "#ffffff1a",
-                                        activeBorderColor: "transparent",
+                                        selectorBg: "#38115f",
+                                        activeBorderColor: "#38115f",
                                         activeOutlineColor: "transparent",
-                                        colorText: "#ffffff",
                                         optionSelectedBg: "#7c7c7f",
                                     },
                                 },
                                 token: {
-                                    colorPrimary: '#ffffff1a',
+                                    colorPrimary: '#A855F7',
                                     colorIcon: 'white',
-                                    colorBgBase: '#333335',
+                                    colorBgBase: 'transparent',
                                     colorText: 'white',
                                     colorTextPlaceholder: '#9CA3AF',
                                 },
