@@ -37,8 +37,8 @@ export default function PlanCard({ plan, index }: PlanCardProps) {
       <div
         className={`rounded-2xl p-8 backdrop-blur-sm transition-all duration-300 flex flex-col bg-[#000000] ${
           plan.isPopular
-            ? "border-2 border-[#9810FA] lg:h-[600px]"
-            : "border-2 border-[#E5E7EB] lg:min-h-[570px]"
+            ? "border-2 border-[#9810FA] lg:h-[550px]"
+            : "border-2 border-[#9810FA] lg:min-h-[570px]"
         }`}
       >
         {/* Plan Name and Price */}
