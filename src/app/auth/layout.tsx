@@ -14,7 +14,7 @@ export default function layout({ children }: { children: React.ReactNode }) {
           alt="auth image"
         />
       </div>
-      <div className="flex flex-col items-center justify-between  bg-[#0C0C0D] py-12 px-4 md:px-5 h-full ">
+      <div className="flex flex-col items-center justify-between  bg-[#0C0C0D] py-12 px-4 md:px-5 lg:px-12 h-full w-full!">
         <ConfigProvider
           theme={{
             components: {

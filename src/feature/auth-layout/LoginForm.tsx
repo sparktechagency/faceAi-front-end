@@ -11,23 +11,40 @@ export default function LoginForm() {
   const [form1] = Form.useForm();
 
   return (
-    <div className="flex flex-col justify-between items-center h-full">
+    <div className="flex flex-col justify-between items-center h-full w-full">
       <AuthLogo />
-      <div className="text-center">
+      <div className="text-center w-full">
         <h3 className="section-title mb-2!">Sign In</h3>
         <p className="text-sm text-[#7E7E7E]">
           Enter your email and password to access your account
         </p>
 
-        <div className="w-full pt-12 grow">
-          <Form form={form1} layout="vertical">
+        <div className="w-full pt-12 grow text-start!">
+          <Form
+            form={form1}
+            layout="vertical"
+            onFinish={(values) => console.log(values)}
+          >
             {/* Email */}
-            <Form.Item label="Email" className="form-item">
+            <Form.Item
+              label="Email"
+              name="email"
+              className="form-item"
+              rules={[
+                { required: true, message: "Email is required" },
+                { type: "email", message: "Enter a valid email" },
+              ]}
+            >
               <Input placeholder="Enter your email" className="custom-input" />
             </Form.Item>
 
             {/* Password */}
-            <Form.Item label="Password" className="form-item">
+            <Form.Item
+              label="Password"
+              name="password"
+              className="form-item"
+              rules={[{ required: true, message: "Password is required" }]}
+            >
               <Input.Password
                 placeholder="Enter your password"
                 className="custom-input"
@@ -37,14 +54,14 @@ export default function LoginForm() {
             {/* Remember + Forgot */}
             <div className="flex justify-between items-center mb-4">
               <Checkbox>Remember me</Checkbox>
-              <button className="text-[#7E7E7E] text-sm hover:text-white transition cursor-pointer">
+              <Link href={'/auth/forget-password'} className="text-[#7E7E7E] text-sm hover:text-white transition cursor-pointer">
                 Forgot Password
-              </button>
+              </Link>
             </div>
 
             {/* Sign In */}
             <Button
-              block
+              htmlType="submit"
               className="h-10! w-full! lg:h-12! bg-linear-to-r! from-[#9810FA]!  to-[#E60076]! shadow-none! mb-3 rounded-xl!"
             >
               Sign In
@@ -53,7 +70,7 @@ export default function LoginForm() {
             {/* Sign In with Google */}
             <Button
               block
-              className="h-10! w-full! lg:h-12! bg-white! text-black! cursor-pointer  shadow-none! mb-3 rounded-xl!"
+              className="h-10! w-full! lg:h-12! bg-white! text-black! cursor-pointer shadow-none! mb-3 rounded-xl!"
             >
               <FcGoogle size={22} className="mr-2" />
               Sign In with Google
@@ -62,7 +79,7 @@ export default function LoginForm() {
             {/* Sign In with Facebook */}
             <Button
               block
-              className="h-10! w-full! lg:h-12! bg-white! text-black! cursor-pointer  shadow-none! mb-3 rounded-xl!"
+              className="h-10! w-full! lg:h-12! bg-white! text-black! cursor-pointer shadow-none! mb-3 rounded-xl!"
             >
               <FaFacebook size={20} className="mr-2 text-[#1877F2]" />
               Sign In with Facebook
@@ -72,8 +89,7 @@ export default function LoginForm() {
       </div>
       <p className="text-sm text-[#7E7E7E]">
         Don’t have an account?{" "}
-        <Link href={"/auth/register"} className="text-[#A855F7] underline">
-          {" "}
+        <Link href="/auth/register" className="text-[#A855F7] underline">
           Sign Up
         </Link>
       </p>
