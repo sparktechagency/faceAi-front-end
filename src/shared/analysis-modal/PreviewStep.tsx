@@ -23,7 +23,7 @@ export function PreviewStep({ image, onAnalyze, onRemove }: PreviewStepProps) {
         <img
           src={image || "/placeholder.svg"}
           alt="Uploaded face"
-          className="w-full h-fit object-contain "
+          className="w-full h-[300px] object-contain "
         />
         <button
           onClick={onRemove}

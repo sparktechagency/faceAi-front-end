@@ -7,17 +7,17 @@ const Dashboard = () => {
     return (
         <div className="">
             <div className="max-w-[95%] mx-auto space-y-6">
-                <Summary />          
+                <Summary />
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 ">
                     <div className="lg:col-span-2 ">
                         <div className='flex flex-col gap-2'>
-                            <div className=' flex items-center gap-3 w-full mb-6'>
+                            <div className=' flex md:flex-row flex-col items-center gap-3 w-full mb-6'>
                                 {actionCards.map((card, index) => (
                                     <div
                                         key={index}
                                         className="bg-black/60 border-2 border-purple-500/30 rounded-3xl p-6 py-[30px] backdrop-blur-sm w-full"
                                     >
-                                        <h2 className="text-[22px] font-normal text-white mb-2">{card.title}</h2>
+                                        <h2 className="md:text-[22px] text-xl font-normal text-white mb-2">{card.title}</h2>
 
                                         <p className="text-[#D8D8D8] text-[14px] mb-6">{card.description}</p>
 
@@ -56,8 +56,8 @@ const Dashboard = () => {
 
                     <div className="bg-black/60 border-2 border-purple-500/30 rounded-3xl p-6 backdrop-blur-sm ">
                         <div className="flex items-center justify-between mb-6">
-                            <h2 className="text-2xl font-normal text-white">Recent Analysis</h2>
-                            <button className="text-purple-400 hover:text-purple-300 text-sm font-medium">
+                            <h2 className="md:text-2xl text-xl font-normal text-white">Recent Analysis</h2>
+                            <button className="text-purple-400 hover:text-purple-300 md:text-sm text-xs font-medium">
                                 See All
                             </button>
                         </div>
@@ -74,8 +74,8 @@ const Dashboard = () => {
                                             <span className="text-white/70 text-xs">/10</span>
                                         </div>
                                         <div>
-                                            <p className="text-white font-medium">{item.date}</p>
-                                            <p className="text-gray-400 text-sm">Analysis completed</p>
+                                            <p className="text-white md:font-medium font-normal">{item.date}</p>
+                                            <p className="text-gray-400 md:text-sm text-xs">Analysis completed</p>
                                         </div>
                                     </div>
                                     <div className="text-right">
