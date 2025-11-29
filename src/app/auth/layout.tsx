@@ -4,8 +4,8 @@ import React from "react";
 
 export default function layout({ children }: { children: React.ReactNode }) {
   return (
-    <section className="grid grid-cols-1 md:grid-cols-2 gap-2 items-center min-h-screen max-w-6xl mx-auto py-8">
-      <div className="  flex justify-end items-end">
+    <section className="grid grid-cols-1 md:grid-cols-2 gap-2 items-center min-h-screen md:max-w-6xl mx-auto md:py-8">
+      <div className="  md:flex justify-end items-end hidden ">
         <Image
           src={"/assets/images/auth/auth-img.png"}
           height={600}
@@ -14,7 +14,7 @@ export default function layout({ children }: { children: React.ReactNode }) {
           alt="auth image"
         />
       </div>
-      <div className="flex flex-col items-center justify-between  bg-[#0C0C0D] py-12 px-4 md:px-5 lg:px-12 h-full w-full!">
+      <div className="flex flex-col items-center justify-between  bg-[#0C0C0D] md:py-12 py-10 px-4 md:px-5 lg:px-12 h-full w-full!">
         <ConfigProvider
           theme={{
             components: {

@@ -1,5 +1,6 @@
 import React from "react";
 import { Check, CornerRightDown } from "lucide-react";
+import { useRouter } from "next/navigation";
 
 interface PlanCardProps {
   plan: {
@@ -15,6 +16,7 @@ interface PlanCardProps {
   index: number;
 }
 export default function PlanCard({ plan, index }: PlanCardProps) {
+  const router = useRouter();
   return (
     <div
       key={index}
@@ -73,7 +75,9 @@ export default function PlanCard({ plan, index }: PlanCardProps) {
         </ul>
 
         {/* Button */}
+    
         <button
+        onClick={()=>router.push('/')}
           className={`w-full py-3 px-4 rounded-lg font-semibold text-white transition-all duration-200 cursor-pointer ${plan.buttonStyle}`}
         >
           {plan.buttonText}
