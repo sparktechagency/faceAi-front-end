@@ -4,8 +4,13 @@ import { Form, Input, Button } from "antd";
 import type { InputRef } from "antd";
 import "./style.css";
 import AuthLogo from "@/shared/AuthLogo";
+import { useRouter, useSearchParams } from "next/navigation";
 
 export default function VerifyCodeForm() {
+  const searchParam = useSearchParams();
+  const router = useRouter();
+  const mode = searchParam.get("mode");
+
   // Store refs for 6 InputRef objects (AntD structure)
   const inputsRef = useRef<(InputRef | null)[]>([]);
   const [code, setCode] = useState<string[]>(Array(6).fill(""));
@@ -37,6 +42,14 @@ export default function VerifyCodeForm() {
   const handleSubmit = () => {
     const finalCode = code.join("");
     console.log("Verification code:", finalCode);
+
+    if (mode === "register") {
+      // Redirect to register page
+      router.push("/auth/success?mode=register");
+    } else if (mode === "forget") {
+      // Redirect to forget password page
+      router.push("/auth/reset-password");
+    }
   };
 
   return (

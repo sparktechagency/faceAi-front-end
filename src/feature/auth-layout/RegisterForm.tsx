@@ -12,7 +12,7 @@ export default function RegisterForm() {
 
   const handleSubmit = (values: any) => {
     console.log(values);
-    router.push("/auth/verify-code");
+    router.push("/auth/verify-code?mode=register");
   };
 
   return (

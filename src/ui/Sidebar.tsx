@@ -86,7 +86,7 @@ const Sidebar = ({ onCloseDrawer }: SidebarProps) => {
 
         <div className="py-3 ps-3 absolute bottom-0 w-full ">
           <Link
-            href="/login"
+            href="/auth/login"
             onClick={onCloseDrawer}
             className="flex items-center gap-x-2 text-red-500 hover:text-red-600"
           >
