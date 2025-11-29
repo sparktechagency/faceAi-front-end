@@ -6,10 +6,16 @@ import { FaFacebook } from "react-icons/fa";
 import "./style.css";
 import AuthLogo from "@/shared/AuthLogo";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 export default function LoginForm() {
   const [form1] = Form.useForm();
+  const router = useRouter();
 
+  const handleLogin = (values: any) => {
+    console.log(values);
+    router.push("/dashboard");
+  };
   return (
     <div className="flex flex-col justify-between items-center h-full w-full">
       <AuthLogo />
@@ -20,11 +26,7 @@ export default function LoginForm() {
         </p>
 
         <div className="w-full pt-12 grow text-start!">
-          <Form
-            form={form1}
-            layout="vertical"
-            onFinish={(values) => console.log(values)}
-          >
+          <Form form={form1} layout="vertical" onFinish={handleLogin}>
             {/* Email */}
             <Form.Item
               label="Email"
@@ -54,7 +56,10 @@ export default function LoginForm() {
             {/* Remember + Forgot */}
             <div className="flex justify-between items-center mb-4">
               <Checkbox>Remember me</Checkbox>
-              <Link href={'/auth/forget-password'} className="text-[#7E7E7E] text-sm hover:text-white transition cursor-pointer">
+              <Link
+                href={"/auth/forget-password"}
+                className="text-[#7E7E7E] text-sm hover:text-white transition cursor-pointer"
+              >
                 Forgot Password
               </Link>
             </div>

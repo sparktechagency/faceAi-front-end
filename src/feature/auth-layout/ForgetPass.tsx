@@ -11,7 +11,7 @@ export default function ForgetPasswordForm() {
   const [form] = Form.useForm();
   const handleSubmit = (values: any) => {
     console.log(values);
-    router.push("/auth/verify-code");
+    router.push("/auth/verify-code?mode=forget");
   };
   return (
     <div className="flex flex-col justify-between items-center h-full w-full">
