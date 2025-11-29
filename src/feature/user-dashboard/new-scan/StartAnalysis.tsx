@@ -57,7 +57,7 @@ const StartAnalysis = () => {
                 )}
 
                 {step === "analyzing" && uploadedImage && (
-                    <div>
+                    <div className='bg-black p-2 pt-5 rounded-2xl'>
                         <AnalyzingStep image={uploadedImage} />
                     </div>
                 )}

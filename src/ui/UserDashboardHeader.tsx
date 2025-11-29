@@ -6,7 +6,7 @@ const UserDashboardHeader = () => {
         <div className='flex items-center gap-x-7 justify-end'>
 
 
-            <Link href="/profile" className='flex  items-center gap-x-3'>
+            <Link href="/settings" className='flex  items-center gap-x-3'>
                 <img
                     style={{
                         clipPath: "circle()",
