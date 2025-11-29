@@ -1,9 +1,10 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 export default function AuthLogo() {
   return (
-    <div className="flex items-center justify-center gap-2">
+    <Link href={"/"} className="flex items-center justify-center gap-2 ">
       <Image
         src={"/favicon.png"}
         height={100}
@@ -12,6 +13,6 @@ export default function AuthLogo() {
         alt="logo"
       />
       <span className="text-[22px] font-medium"> Face Scan</span>
-    </div>
+    </Link>
   );
 }
