@@ -1,6 +1,6 @@
 const features = [
   {
-    icon: "/assets/icons/home/features/icon.svg",
+    icon: "/assets/icons/home/features/Icon.svg",
     title: "Advanced AI Analysis",
     description:
       "Our AI analyzes your face across multiple criteria for precise and personalized scoring.",
@@ -8,7 +8,7 @@ const features = [
     iconColor: "text-purple-300",
   },
   {
-    icon: "/assets/icons/home/features/icon2.svg",
+    icon: "/assets/icons/home/features/Icon2.svg",
     title: "Instant Scanning",
     description:
       "Upload a photo and receive your complete analysis within seconds.",
@@ -16,7 +16,7 @@ const features = [
     iconColor: "text-magenta-300",
   },
   {
-    icon: "/assets/icons/home/features/icon3.svg",
+    icon: "/assets/icons/home/features/Icon3.svg",
     title: "Progress Tracking",
     description:
       "Monitor your improvements over time with detailed graphs and comparisons.",
@@ -24,7 +24,7 @@ const features = [
     iconColor: "text-blue-300",
   },
   {
-    icon: "/assets/icons/home/features/icon4.svg",
+    icon: "/assets/icons/home/features/Icon4.svg",
     title: "Custom Routines",
     description:
       "Get personalized exercises and routines to naturally enhance your features.",
@@ -32,7 +32,7 @@ const features = [
     iconColor: "text-purple-300",
   },
   {
-    icon: "/assets/icons/home/features/icon5.svg",
+    icon: "/assets/icons/home/features/Icon5.svg",
     title: "Privacy Guaranteed",
     description:
       "Your data is encrypted and secure. Full GDPR compliance for peace of mind.",
@@ -40,7 +40,7 @@ const features = [
     iconColor: "text-magenta-300",
   },
   {
-    icon: "/assets/icons/home/features/icon6.svg",
+    icon: "/assets/icons/home/features/Icon6.svg",
     title: "Active Community",
     description:
       "Join thousands of users improving their appearance every day.",
